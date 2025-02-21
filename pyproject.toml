@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "categorical-data-clustering"
+version = "0.1.0"
+description = ""
+authors = ["kimtth"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+matplotlib = "^3.9.3"
+openpyxl = "^3.1.5"
+scipy = "^1.14.1"
+pandas = "^2.2.3"
+pip-autoremove = "^0.10.0"
+seaborn = "^0.13.2"
+scikit-learn = "^1.6.1"
+faker = "^36.1.1"
+numpy = "^1.26.4"
+hdbscan = "^0.8.33"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
