@@ -97,6 +97,8 @@ def compute_distance_matrix(df, distance_mode="jaccard", recalc=True):
         df_encoded = one_hot_encode(filtered_df_overlap(df))
         if distance_mode == "jaccard":
             dist_matrix = pairwise_distances(df_encoded, metric="jaccard")
+        elif distance_mode == "hamming":
+            dist_matrix = pairwise_distances(df_encoded, metric="hamming")
         elif distance_mode == "overlap":
             dist_matrix = overlap_distance(df_encoded)
         elif distance_mode == "gower":

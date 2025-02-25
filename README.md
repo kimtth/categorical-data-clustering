@@ -4,7 +4,7 @@ A Python script for clustering categorical datasets using **DBSCAN** and **HDBSC
 
 ### Features
 ✅ Supports **categorical data clustering**  
-✅ Computes **Jaccard, Overlap, Gower, and Euclidean** distance matrices  
+✅ Computes **Jaccard, Hamming, Overlap, Gower, and Euclidean** distance matrices  
 ✅ Uses **DBSCAN** and **HDBSCAN** for clustering  
 ✅ Provides **t-SNE and PCA visualizations**  
 ✅ Automatically suggests an **optimal epsilon (eps) value** for DBSCAN  
@@ -30,7 +30,7 @@ python clustering.py data.csv --distance_mode jaccard --cluster_mode dbscan --ep
 |----------------|----------------------------------------------------|---------|
 | `csv_file_path` | Path to the CSV file                              | Required |
 | `--re_calc`     | Recompute the distance matrix (`True`/`False`)    | `True` |
-| `--distance_mode` | Distance metric (`jaccard`, `overlap`, `gower`, `euclidean`) | `jaccard` |
+| `--distance_mode` | Distance metric (`jaccard`, `hamming`, `overlap`, `gower`, `euclidean`) | `jaccard` |
 | `--cluster_mode`  | Clustering method (`dbscan` or `hdbscan`)        | `dbscan` |
 | `--eps`         | Epsilon value for DBSCAN clustering               | `0.25` |
 | `--min_samples` | MinPts for DBSCAN/HDBSCAN                         | `20` |
@@ -76,6 +76,7 @@ Choosing the right **eps**, **min_samples**, and **distance metric** is crucial 
 | **Overlap Coefficient**           | Measures similarity based on the intersection of features (binary vectors). Less common than Jaccard for measuring dissimilarity. | Yes, requires custom *dissimilarity* function (e.g., 1 - Overlap Coefficient). | Can be used with customization, but less common than Jaccard. |
 | **Gower Distance**                | Works for mixed data types (both numeric and categorical features).                 | Yes, with custom metric support (best for mixed data). | Yes, works well with mixed data.          |
 | **Euclidean Distance**            | Measures straight-line distance between points (suitable for continuous data).     | Not recommended for one-hot encoded categorical data. | Not recommended for one-hot encoded categorical data. |
+| **Hamming Distance**             | Counts the number of positions at which two vectors are different. Well-suited for binary/one-hot encoded data. | Yes, works well for one-hot encoded data. | Yes, works well for one-hot encoded data. |
 
 ### Reference
 
