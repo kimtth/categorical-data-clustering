@@ -25,6 +25,8 @@ Run the script from the terminal with a CSV file containing categorical data:
 python clustering.py data.csv --distance_mode jaccard --cluster_mode dbscan --eps 0.6 --min_samples 50
 ```
 
+<img src="doc\clustering_dbscan_b.png" alt="clustering_dbscan" width=500>
+
 #### Command Line Arguments
 | Argument        | Description                                        | Default |
 |----------------|----------------------------------------------------|---------|
